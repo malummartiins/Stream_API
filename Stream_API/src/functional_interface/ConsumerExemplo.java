@@ -11,16 +11,16 @@ import java.util.function.Consumer;
 
 public class ConsumerExemplo {
     public static void main(String[] args) {
-        List<Integer> numeros = Arrays.asList(1,2,3,4,5);
+        List<Integer> numeros = Arrays.asList(1, 2, 3, 4, 5);
 
-        //Consumer com expressao lambda para imprimir nº pares
+        // Consumer com expressao lambda para imprimir nº pares
         Consumer<Integer> imprimirNumeroPar = numero -> {
-            if (numero % 2 == 0){
+            if (numero % 2 == 0) {
                 System.out.println(numero);
             }
         };
 
-        //imprimir os nº pares no stream =forEach=
+        // imprimir os nº pares no stream =forEach=
         numeros.stream().forEach(imprimirNumeroPar);
     }
 }
